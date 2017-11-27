@@ -15,14 +15,24 @@ $grid-leading      : 1.5 * $font-size-base;       // 24px
 // =============================================================================
 // Responsive Breakpoints
 // =============================================================================
-$width-small  : 400px;
-$width-medium : 840px;
-$width-large  : 1280px;
+$width-xs  : 320px;
+$width-sm  : 480px;
+$width-md  : 768px;
+$width-lg  : 1024px;
+$width-xlg : 1360px;
+$width-xxlg : 1500px;
 
 // =============================================================================
 // Project-Specific Variables
 // =============================================================================
-$border-sides       : 1px solid #ddd;
-$width-floating     : 440px;
-$height-input-boxes : 40px;
-$color-background   : rgba(0,0,0,.5);
+$container-mw : 1460px;
+
+// =============================================================================
+// Color Variables
+// =============================================================================
+$color-active : #EC1EA7;
+$color-semi-active : #FFD119;
+$color-txt : #DFDBDF;
+$color-txt-dark : #4C4C4C;
+$color-header-bg-left: #3863E9;
+$color-header-bg-right: #2087EC;

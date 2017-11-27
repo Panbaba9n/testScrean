@@ -84,8 +84,8 @@ gulp.task('allBrowsers', function () {
 gulp.task('validateHTML', function () {
     'use strict';
 
-    return gulp.src(['dev/html/*.html', 'dev/html/**/*.html'])
-        .pipe(htmlValidator());
+    // return gulp.src(['dev/html/*.html', 'dev/html/**/*.html'])
+    //     .pipe(htmlValidator());
 });
 
 /**
@@ -147,7 +147,7 @@ gulp.task('compileCSSForProd', function () {
             precision: 10
         }).on('error', sass.logError))
         .pipe(browserSpecificPrefixer({
-            browsers: ['last 2 versions']
+            browsers: ['last 10 versions']
         }))
         .pipe(cssCompressor())
         .pipe(gulp.dest('prod/styles'));
