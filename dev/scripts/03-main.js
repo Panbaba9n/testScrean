@@ -1,3 +1,4 @@
+/*jslint browser: true, devel: true, indent: 4, maxlen: 85, todo: true */
 /**
  * ONLOAD
  *
@@ -5,8 +6,7 @@
  * JavaScript file to all the ID attributes in “index.html.” It also binds the click
  * event listeners to each of the buttons found in “index.html.”
  */
-
- /*jslint browser: true, devel: true, indent: 4, maxlen: 85, todo: true */
+ 
 (function() {
     'use strict';
 

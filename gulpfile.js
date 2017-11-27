@@ -201,7 +201,7 @@ gulp.task('lintJS', function () {
                 indent: [2, 4, {SwitchCase: 1}],
                 quotes: [2, 'single'],
                 semi: [2, 'always'],
-                'linebreak-style': [2, 'unix'],
+                // 'linebreak-style': [2, 'unix'],
                 'max-len': [2, 85, 4]
             },
             env: {
@@ -210,14 +210,14 @@ gulp.task('lintJS', function () {
             },
             extends: 'eslint:recommended'
         }))
-        .pipe(jsLinter.formatEach('compact', process.stderr))
+        .pipe(jsLinter.formatEach('compact', process.stderr));
         //
         // “To have the process exit with an error code (1) on lint error, return
         // the stream and pipe to failAfterError last.”
         //
         //     — https://github.com/adametry/gulp-eslint
         //
-        .pipe(jsLinter.failAfterError());
+        // .pipe(jsLinter.failAfterError());
 });
 
 /**
@@ -326,7 +326,8 @@ gulp.task('serve', ['compileCSSForDev', 'compileJSForDev', 'lintJS', 'validateHT
         }
     });
 
-    gulp.watch('dev/scripts/*.js', ['compileJSForDev', 'lintJS'])
+    // gulp.watch('dev/scripts/*.js', ['compileJSForDev', 'lintJS'])
+    gulp.watch('dev/scripts/*.js', ['compileJSForDev'])
         .on('change', reload);
 
     gulp.watch('dev/styles/**/*.scss', ['compileCSSForDev'])
